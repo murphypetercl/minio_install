@@ -164,6 +164,8 @@
 <h2 id="mainyml_1">main.yml</h2>
 <hr />
 <h3 id="minio_server_install_volume_groups">minio_server_install_volume_groups</h3>
+<p>Volume Group settings
+...</p>
 <pre><code>
 vg_min:
   pv: /dev/sdd
@@ -171,6 +173,8 @@ vg_min:
 </code></pre>
 <hr />
 <h3 id="minio_server_install_volumes">minio_server_install_volumes</h3>
+<p>Logical volume variable settings
+...</p>
 <pre><code>
 lv_min:
   drive: vg_min
@@ -179,6 +183,8 @@ lv_min:
 </code></pre>
 <hr />
 <h3 id="minio_server_install_dir_mounts">minio_server_install_dir_mounts</h3>
+<p>Directory for logical volume mount
+...</p>
 <pre><code>
 /var/lib/minio:
   src: /dev/vg_min/lv_min
@@ -186,6 +192,8 @@ lv_min:
 </code></pre>
 <hr />
 <h3 id="minio_server_datadirs">minio_server_datadirs</h3>
+<p>Minio server data directory
+...</p>
 <pre><code>
 /var/lib/minio
 ...
@@ -193,6 +201,8 @@ lv_min:
 </code></pre>
 <hr />
 <h3 id="minio_user">minio_user</h3>
+<p>Minio user
+...</p>
 <pre><code>
 minio
 ...
@@ -200,6 +210,8 @@ minio
 </code></pre>
 <hr />
 <h3 id="minio_group">minio_group</h3>
+<p>Minio user group
+...</p>
 <pre><code>
 minio
 ...
@@ -207,6 +219,8 @@ minio
 </code></pre>
 <hr />
 <h3 id="minio_server_download_base_url">minio_server_download_base_url</h3>
+<p>Base URL to download minio from
+...</p>
 <pre><code>
 https://dl.minio.io/server/minio/release/linux-amd64
 ...
@@ -214,6 +228,8 @@ https://dl.minio.io/server/minio/release/linux-amd64
 </code></pre>
 <hr />
 <h3 id="minio_server_bin">minio_server_bin</h3>
+<p>Minio server bin directory
+...</p>
 <pre><code>
 /usr/local/bin/minio
 ...
@@ -221,6 +237,8 @@ https://dl.minio.io/server/minio/release/linux-amd64
 </code></pre>
 <hr />
 <h3 id="minio_server_envfile">minio_server_envfile</h3>
+<p>Path to the file containing the ENV variables for the Minio server
+...</p>
 <pre><code>
 /etc/default/minio
 ...
@@ -228,30 +246,40 @@ https://dl.minio.io/server/minio/release/linux-amd64
 </code></pre>
 <hr />
 <h3 id="minio_port">minio_port</h3>
+<p>Minio server port
+...</p>
 <pre><code>
 '9091'
 
 </code></pre>
 <hr />
 <h3 id="minio_server_opts">minio_server_opts</h3>
+<p>Additional Minio server CLI options
+...</p>
 <pre><code>
 ''
 
 </code></pre>
 <hr />
 <h3 id="minio_access_key">minio_access_key</h3>
+<p>Minio access key
+...</p>
 <pre><code>
 ''
 
 </code></pre>
 <hr />
 <h3 id="minio_secret_key">minio_secret_key</h3>
+<p>Minio secret key
+...</p>
 <pre><code>
 ''
 
 </code></pre>
 <hr />
 <h3 id="minio_server_env_extra">minio_server_env_extra</h3>
+<p>Additional environment variables to be set in minio server environment
+...</p>
 <pre><code>
 ''
 
