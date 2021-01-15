@@ -5,7 +5,6 @@
     minio_server_checksum: "{{ lookup('url', minio_server_download_url + '.sha256sum').split(' ')[0] }}"
   tags: minio,install
 
-# @action Minio-server-install-minio # Download Minio
 - name: Download the Minio server
   get_url:
     url: "{{ minio_server_download_url }}"
