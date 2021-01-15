@@ -1,0 +1,15 @@
+---
+- name: Get status of the FS object
+  stat:
+    path: "{{ item.key | lower }}"
+  register: path_status
+  tags: minio,volumes,dirs
+
+- name: Create directory if not already created
+  file:
+    path: "{{ item.key | lower }}"
+    state: directory
+    owner: "{{ minio_user }}"
+    group: "{{ minio_group }}"
+  when: path_status.stat.exists is defined and not path_status.stat.exists|bool
+  tags: minio,volumes,dirs

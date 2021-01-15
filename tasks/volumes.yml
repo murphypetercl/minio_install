@@ -1,0 +1,43 @@
+---
+- name: Configure LVM volume groups
+  lvg:
+    vg: "{{ item.key }}"
+    pvs: "{{ item.value.pv }}"
+  loop: "{{ minio_server_install_volume_groups|dict2items }}"
+  tags: minio,volumes
+
+- name: Configure LVM logical volumes
+  lvol:
+    vg: "{{ item.value.drive | lower }}"
+    lv: "{{ item.key | lower }}"
+    size: "{{ item.value.size }}"
+    resizefs: true
+  loop: "{{ minio_server_install_volumes|dict2items }}"
+  tags: minio,volumes
+
+- name: Create the xfs filesystems
+  filesystem:
+    fstype: xfs
+    dev: /dev/{{ item.value.drive | lower }}/{{ item.key | lower }}
+  loop: "{{ minio_server_install_volumes|dict2items }}"
+  tags: minio,volumes
+
+- name: Create directories
+  include_tasks: directories.yml
+  loop: "{{ minio_server_install_dir_mounts|dict2items }}"
+  tags: minio,volumes
+
+- name: Create list of mounted devices
+  set_fact:
+    mounts: "{{ ansible_mounts|json_query('[].mount') }}"
+  tags: minio,volumes
+
+- name: Mount and bind a volume
+  mount:
+    path: "{{ item.key | lower }}"
+    src: "{{ item.value.src | lower }}"
+    state: mounted
+    fstype: xfs
+  when: item.key | lower not in mounts
+  loop: "{{ minio_server_install_dir_mounts|dict2items }}"
+  tags: minio,volumes
