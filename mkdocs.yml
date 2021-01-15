@@ -1,5 +1,5 @@
 ---
-site_name: Minio - Dsitributed Mode
+site_name: Minio - Distributed Mode
 site_description: Role to deploy and configure Minio in distributed mode
 theme: mkdocs
 
