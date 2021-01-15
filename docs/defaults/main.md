@@ -30,6 +30,10 @@ Contents
   
 ---
 ### minio_server_install_volume_groups
+
+
+Volume Group settings
+...
   
 ```
 
@@ -39,6 +43,10 @@ vg_min:
 ```  
 ---
 ### minio_server_install_volumes
+
+
+Logical volume variable settings
+...
   
 ```
 
@@ -49,6 +57,10 @@ lv_min:
 ```  
 ---
 ### minio_server_install_dir_mounts
+
+
+Directory for logical volume mount
+...
   
 ```
 
@@ -58,6 +70,10 @@ lv_min:
 ```  
 ---
 ### minio_server_datadirs
+
+
+Minio server data directory
+...
   
 ```
 
@@ -67,6 +83,10 @@ lv_min:
 ```  
 ---
 ### minio_user
+
+
+Minio user
+...
   
 ```
 
@@ -76,6 +96,10 @@ minio
 ```  
 ---
 ### minio_group
+
+
+Minio user group
+...
   
 ```
 
@@ -85,6 +109,10 @@ minio
 ```  
 ---
 ### minio_server_download_base_url
+
+
+Base URL to download minio from
+...
   
 ```
 
@@ -94,6 +122,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_server_bin
+
+
+Minio server bin directory
+...
   
 ```
 
@@ -103,6 +135,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_server_envfile
+
+
+Path to the file containing the ENV variables for the Minio server
+...
   
 ```
 
@@ -112,6 +148,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_port
+
+
+Minio server port
+...
   
 ```
 
@@ -120,6 +160,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_server_opts
+
+
+Additional Minio server CLI options
+...
   
 ```
 
@@ -128,6 +172,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_access_key
+
+
+Minio access key
+...
   
 ```
 
@@ -136,6 +184,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_secret_key
+
+
+Minio secret key
+...
   
 ```
 
@@ -144,6 +196,10 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ```  
 ---
 ### minio_server_env_extra
+
+
+Additional environment variables to be set in minio server environment
+...
   
 ```
 

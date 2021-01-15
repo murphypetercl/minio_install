@@ -27,4 +27,4 @@ Information
 
 |Author|Company|License|Minimum Ansible Version|
 | :---: | :---: | :---: | :---: |
-|Peter Murphy|My Company|MIT|2.9|
+|Peter Murphy|My Company|None|2.9|
