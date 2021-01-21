@@ -24,6 +24,8 @@ nav:
     - tasks/users.md
     - tasks/file-system.md
     - tasks/minio.md
+  - Handlers:
+    - handlers/main.md
   
 
 # nav:
