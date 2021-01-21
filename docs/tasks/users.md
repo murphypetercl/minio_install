@@ -1,16 +1,10 @@
 
-users
-=====
 
-Contents
-========
 
-* [Tasks](#tasks)
-	* [minio/users.yml](#miniousersyml)
+
+# Tasks: users
   
----
-# Tasks
-  
+---  
 
 ## minio/users.yml
 

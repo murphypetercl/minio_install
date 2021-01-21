@@ -1,16 +1,10 @@
 
-main
-====
 
-Contents
-========
 
-* [Tasks](#tasks)
-	* [main.yml](#mainyml)
+
+# Tasks: main
   
----
-# Tasks
-  
+---  
 
 ## main.yml
 

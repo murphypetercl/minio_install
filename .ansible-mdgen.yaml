@@ -16,3 +16,5 @@ tasks:
       files_to_combine:
         - name: minio/minio.yml
         - name: minio/firewall.yml
+
+download_pdf: True

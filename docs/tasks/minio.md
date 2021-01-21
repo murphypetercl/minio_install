@@ -1,17 +1,10 @@
 
-minio
-=====
 
-Contents
-========
 
-* [Tasks](#tasks)
-	* [minio/minio.yml](#miniominioyml)
-	* [minio/firewall.yml](#miniofirewallyml)
+
+# Tasks: minio
   
----
-# Tasks
-  
+---  
 
 ## minio/minio.yml
 

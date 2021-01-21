@@ -1,16 +1,42 @@
 ---
 site_name: Minio - Distributed Mode
 site_description: Role to deploy and configure Minio in distributed mode
-theme: mkdocs
+theme:
+  name: material
+
+
+plugins:
+  - search
+  - with-pdf:
+      author: Peter Murphy
+      copyright: My Company
+      cover_subtitle: Ansible role to deploy and configure Minio in distributed mode
+      toc_level: 2
 
 nav:
   - index.md
   - Defaults:
     - defaults/main.md
+  - Vars:
+    - variables/main.md
   - Tasks:
     - tasks/main.md
     - tasks/users.md
     - tasks/file-system.md
     - tasks/minio.md
-  - Vars:
-    - variables/main.md
+  
+
+# nav:
+#   - index.md
+#   - Defaults:
+#     - defaults/main.md
+#   - Tasks:
+#     - tasks/main.md
+#     - tasks/minio/users.md
+#     - tasks/directories.md
+#     - tasks/volumes.md
+#     - Minio:
+#       - tasks/minio/minio.md
+#       - tasks/minio/firewall.md
+#   - Vars:
+#     - variables/main.md

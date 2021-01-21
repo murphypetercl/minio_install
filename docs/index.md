@@ -1,28 +1,26 @@
 
-minio_install
-=============
 
-Contents
-========
 
-* [Description](#description)
-* [Dependencies](#dependencies)
-* [Information](#information)
+
+# About
   
 ---
-Description
-===========
+## Role Name
+  
+minio_install  
+  
+---
+## Description
   
 Role to install and configure Minio in distributed mode  
   
 ---
-Dependencies
-============
+## Dependencies
   
+None  
   
 ---
-Information
-===========
+## Information
   
 
 |Author|Company|License|Minimum Ansible Version|

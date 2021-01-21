@@ -1,23 +1,11 @@
 
-main.yml
-========
 
-Contents
-========
 
-* [Variables](#variables)
-	* [main.yml](#mainyml)
-		* [minio_server_download_url](#minio_server_download_url)
-		* [minio_server_addr](#minio_server_addr)
+
+# main.yml
   
 ---
-# Variables
-  
----
-## main.yml
-  
----
-### minio_server_download_url
+## minio_server_download_url
 
 
 URL to download minio from
@@ -27,9 +15,8 @@ URL to download minio from
 
 '{{ minio_server_download_base_url }}/minio'
   
-```  
----
-### minio_server_addr
+```
+## minio_server_addr
 
 
 Minio server listen address
