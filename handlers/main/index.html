@@ -8,7 +8,7 @@
 <meta content="Role to deploy and configure Minio in distributed mode" name="description"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Tasks: file-system - Minio - Distributed Mode</title>
+<title>main.yml - Minio - Distributed Mode</title>
 <link href="../../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tasks-file-system">
+<a class="md-skip" href="#mainyml">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Tasks: file-system
+              main.yml
             
           </span>
 </div>
@@ -139,8 +139,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
         Tasks
         <span class="md-nav__icon md-icon"></span>
@@ -152,53 +152,30 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../main/">
+<a class="md-nav__link" href="../../tasks/main/">
         Tasks: main
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../users/">
+<a class="md-nav__link" href="../../tasks/users/">
         Tasks: users
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Tasks: file-system
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/file-system/">
         Tasks: file-system
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#volumesyml">
-    volumes.yml
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#directoriesyml">
-    directories.yml
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../minio/">
+<a class="md-nav__link" href="../../tasks/minio/">
         Tasks: minio
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
         Handlers
         <span class="md-nav__icon md-icon"></span>
@@ -209,8 +186,9 @@
           Handlers
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../handlers/main/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         main.yml
       </a>
 </li>
@@ -226,58 +204,22 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#volumesyml">
-    volumes.yml
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#directoriesyml">
-    directories.yml
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="tasks-file-system">Tasks: file-system</h1>
-<hr/>
-<h2 id="volumesyml">volumes.yml</h2>
+<h1 id="mainyml">main.yml</h1>
 <ul>
 <li>
-<p>Configure LVM volume groups</p>
+<p>Reload minio systemd</p>
 </li>
 <li>
-<p>Configure LVM logical volumes</p>
+<p>Restart minio</p>
 </li>
 <li>
-<p>Create the xfs filesystems</p>
-</li>
-<li>
-<p>Create directories</p>
-</li>
-<li>
-<p>Create list of mounted devices</p>
-</li>
-<li>
-<p>Mount and bind a volume  </p>
-</li>
-</ul>
-<h2 id="directoriesyml">directories.yml</h2>
-<ul>
-<li>
-<p>Get status of the FS object</p>
-</li>
-<li>
-<p>Create directory if not already created</p>
+<p>Reload firewalld service</p>
 </li>
 </ul>
 </article>
@@ -287,7 +229,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../users/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../tasks/minio/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -296,21 +238,8 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Tasks: users
-              </div>
-</div>
-</a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../minio/" rel="next">
-<div class="md-footer-nav__title">
-<div class="md-ellipsis">
-<span class="md-footer-nav__direction">
-                  Next
-                </span>
                 Tasks: minio
               </div>
-</div>
-<div class="md-footer-nav__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
 </div>
 </a>
 </nav>
