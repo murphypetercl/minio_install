@@ -17,4 +17,3 @@ tasks:
         - name: minio/minio.yml
         - name: minio/firewall.yml
 
-download_pdf: True
