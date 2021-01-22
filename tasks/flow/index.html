@@ -8,7 +8,7 @@
 <meta content="Role to deploy and configure Minio in distributed mode" name="description"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Tasks: main - Minio - Distributed Mode</title>
+<title>Flow - Minio - Distributed Mode</title>
 <link href="../../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tasks-main">
+<a class="md-skip" href="#flow">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Tasks: main
+              Flow
             
           </span>
 </div>
@@ -151,33 +151,16 @@
           Tasks
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../flow/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         Flow
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Tasks: main
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../main/">
         Tasks: main
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mainyml">
-    main.yml
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../users/">
@@ -226,43 +209,20 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mainyml">
-    main.yml
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="tasks-main">Tasks: main</h1>
-<hr/>
-<h2 id="mainyml">main.yml</h2>
-<ul>
-<li>
-<p>Set proxy server if defined</p>
-</li>
-<li>
-<p>Configure Minio user</p>
-</li>
-<li>
-<p>Configure logical volumes</p>
-</li>
-<li>
-<p>Download, Install and Configure Minio</p>
-</li>
-<li>
-<p>Configure Firewall</p>
-</li>
-</ul>
+<h1 id="flow">Flow</h1>
+<div class="mermaid">graph LR  
+main.yml(main.yml) --&gt; minio/users.yml(minio/users.yml)  
+main.yml(main.yml) --&gt; volumes.yml(volumes.yml)  
+main.yml(main.yml) --&gt; minio/minio.yml(minio/minio.yml)  
+main.yml(main.yml) --&gt; minio/firewall.yml(minio/firewall.yml)  
+volumes.yml(volumes.yml) --&gt; directories.yml(directories.yml)  
+</div>
 </article>
 </div>
 </div>
@@ -270,7 +230,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../flow/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../../variables/main/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -279,17 +239,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Flow
+                main.yml
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../users/" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../main/" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tasks: users
+                Tasks: main
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
@@ -322,5 +282,5 @@
           }, typeof search !== "undefined" && search)
         })
       </script>
-</body>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
