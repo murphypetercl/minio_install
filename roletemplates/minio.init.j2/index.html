@@ -8,7 +8,7 @@
 <meta content="Role to deploy and configure Minio in distributed mode" name="description"/>
 <link href="../../assets/images/favicon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Tasks: main - Minio - Distributed Mode</title>
+<title>minio.init.j2 - Minio - Distributed Mode</title>
 <link href="../../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#tasks-main">
+<a class="md-skip" href="#minioinitj2">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Tasks: main
+              minio.init.j2
             
           </span>
 </div>
@@ -139,8 +139,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" id="nav-4" type="checkbox"/>
 <label class="md-nav__link" for="nav-4">
         Tasks
         <span class="md-nav__icon md-icon"></span>
@@ -152,53 +152,35 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../flow/">
+<a class="md-nav__link" href="../../tasks/flow/">
         Flow
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Tasks: main
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/main/">
         Tasks: main
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mainyml">
-    main.yml
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../users/">
+<a class="md-nav__link" href="../../tasks/users/">
         Tasks: users
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../file-system/">
+<a class="md-nav__link" href="../../tasks/file-system/">
         Tasks: file-system
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../minio/">
+<a class="md-nav__link" href="../../tasks/minio/">
         Tasks: minio
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="nav-5" id="nav-5" type="checkbox"/>
 <label class="md-nav__link" for="nav-5">
         Templates
         <span class="md-nav__icon md-icon"></span>
@@ -210,17 +192,18 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../roletemplates/minio.env.j2/">
+<a class="md-nav__link" href="../minio.env.j2/">
         minio.env.j2
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../roletemplates/minio.init.j2/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         minio.init.j2
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../roletemplates/minio.service.j2/">
+<a class="md-nav__link" href="../minio.service.j2/">
         minio.service.j2
       </a>
 </li>
@@ -261,43 +244,149 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#mainyml">
-    main.yml
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="tasks-main">Tasks: main</h1>
+<h1 id="minioinitj2">minio.init.j2</h1>
 <hr/>
-<h2 id="mainyml">main.yml</h2>
-<ul>
-<li>
-<p>Set proxy server if defined</p>
-</li>
-<li>
-<p>Configure Minio user</p>
-</li>
-<li>
-<p>Configure logical volumes</p>
-</li>
-<li>
-<p>Download, Install and Configure Minio</p>
-</li>
-<li>
-<p>Configure Firewall</p>
-</li>
-</ul>
+<pre><code>
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          minio
+# Required-Start:    $syslog $network
+# Required-Stop:     $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Distributed object storage server built for cloud applications and devops.
+# Description:       Distributed object storage server built for cloud applications and devops.
+### END INIT INFO
+
+{{ ansible_managed | comment }}
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+NAME=minio
+SERVICEVERBOSE=yes
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+WORKINGDIR=/usr/local/
+DAEMON="{{ minio_server_bin }}"
+USER="{{ minio_user }}"
+
+# Read configuration variable file if it is present
+[ -r "{{ minio_server_envfile }}" ] &amp;&amp; . {{ minio_server_envfile }}
+
+# Make sure the MINIO_VOLUMES variable is defined
+[ -n "${MINIO_VOLUMES}" ] || log_daemon_msg "Variable MINIO_VOLUMES not set in {{ minio_server_envfile }}"
+
+# Set the DAEMON_ARGS variable
+DAEMON_ARGS="server $MINIO_OPTS $MINIO_VOLUMES"
+
+# Specifies the maximum file descriptor number that can be opened by this process
+ulimit -n 65536
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+# Load the VERBOSE setting and other rcS variables
+. /lib/init/vars.sh
+
+# Define LSB log_* functions.
+# Depend on lsb-base (&gt;= 3.2-14) to ensure that this file is present
+# and status_of_proc is working.
+. /lib/lsb/init-functions
+
+#
+# Function that starts the daemon/service
+#
+do_start()
+{
+    # Return
+    #   0 if daemon has been started
+    #   1 if daemon was already running
+    #   2 if daemon could not be started
+    sh -c "USER=$USER start-stop-daemon --start --quiet --pidfile $PIDFILE --make-pidfile \\
+            --test --chdir $WORKINGDIR --chuid $USER \\
+            --exec $DAEMON -- $DAEMON_ARGS &gt; /dev/null \\
+            || return 1"
+    sh -c "USER=$USER start-stop-daemon --start --quiet --pidfile $PIDFILE --make-pidfile \\
+            --background --chdir $WORKINGDIR --chuid $USER \\
+            --exec $DAEMON -- $DAEMON_ARGS \\
+            || return 2"
+}
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+    # Return
+    #   0 if daemon has been stopped
+    #   1 if daemon was already stopped
+    #   2 if daemon could not be stopped
+    #   other if a failure occurred
+    start-stop-daemon --stop --quiet --retry=TERM/1/KILL/5 --pidfile $PIDFILE --name $NAME
+    RETVAL="$?"
+    [ "$RETVAL" = 2 ] &amp;&amp; return 2
+    start-stop-daemon --stop --quiet --oknodo --retry=0/1/KILL/5 --exec $DAEMON
+    [ "$?" = 2 ] &amp;&amp; return 2
+    # Many daemons don't delete their pidfiles when they exit.
+    rm -f $PIDFILE
+    return "$RETVAL"
+}
+
+
+case "$1" in
+  start)
+    [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_daemon_msg "Starting" "$NAME"
+    do_start
+    case "$?" in
+        0|1) [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_end_msg 0 ;;
+        2) [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_end_msg 1 ;;
+    esac
+    ;;
+  stop)
+    [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_daemon_msg "Stopping" "$NAME"
+    do_stop
+    case "$?" in
+        0|1) [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_end_msg 0 ;;
+        2) [ "$SERVICEVERBOSE" != no ] &amp;&amp; log_end_msg 1 ;;
+    esac
+    ;;
+  status)
+    status_of_proc "$DAEMON" "$NAME" &amp;&amp; exit 0 || exit $?
+    ;;
+  restart|force-reload)
+    log_daemon_msg "Restarting" "$NAME"
+    do_stop
+    case "$?" in
+      0|1)
+        do_start
+        case "$?" in
+            0) log_end_msg 0 ;;
+            1) log_end_msg 1 ;; # Old process is still running
+            *) log_end_msg 1 ;; # Failed to start
+        esac
+        ;;
+      *)
+        # Failed to stop
+        log_end_msg 1
+        ;;
+        esac
+    ;;
+  *)
+        echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" &gt;&amp;2
+        exit 3
+        ;;
+esac
+
+:  
+</code></pre>
 </article>
 </div>
 </div>
@@ -305,7 +394,7 @@
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../flow/" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="../minio.env.j2/" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -314,17 +403,17 @@
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Flow
+                minio.env.j2
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../users/" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../minio.service.j2/" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tasks: users
+                minio.service.j2
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
