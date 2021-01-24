@@ -28,6 +28,7 @@ nav:
     - tasks/minio.md
   - Handlers:
     - handlers/main.md
+  - appendix.md
   
 
 # nav:
