@@ -9,23 +9,32 @@
 ## minio/minio.yml
 
 
-* Get the Minio server checksum
+* Get the Minio server checksum  
+**<font color="green">Tags: </font>**minio,install
 
-* Download the Minio server
+* Download the Minio server  
+**<font color="green">Tags: </font>**minio,install
 
-* Generate the Minio server envfile
+* Generate the Minio server envfile  
+**<font color="green">Tags: </font>**minio,install
 
-* Create the Minio server systemd config
+* Create the Minio server systemd config  
+**<font color="green">Tags: </font>**minio,install
 
-* Create the Minio server init.d config
+* Create the Minio server init.d config  
+**<font color="green">Tags: </font>**minio,install
 
 * Enable and start the Minio service  
+**<font color="green">Tags: </font>**minio,install  
 
 ## minio/firewall.yml
 
 
-* Enable firewalld
+* Enable firewalld  
+**<font color="green">Tags: </font>**minio,firewall
 
-* Open firewall ssh port
+* Open firewall ssh port  
+**<font color="green">Tags: </font>**minio,firewall
 
-* Open firewall minio ports
+* Open firewall minio ports  
+**<font color="green">Tags: </font>**minio,firewall
