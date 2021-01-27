@@ -25,3 +25,18 @@ appendix:
       link: https://www.linkedin.com/in/peter-murphy-61493974/
     - description: ansible-mdgen
       link: https://pypi.org/project/ansible-mdgen/
+
+
+# output_dir: "./docs"
+# output_tasks_dir: "tasks"
+# output_handlers_dir: "handlers"
+# output_defaults_dir: "defaults"
+# output_variables_dir: "variables"
+# output_files_dir: "files"
+# output_templates_dir: "roletemplates"
+
+output_overwrite: True
+clear_output: True
+
+# output_templates: False
+# output_files: False
