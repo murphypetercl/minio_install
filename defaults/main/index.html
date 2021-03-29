@@ -418,20 +418,25 @@ vg_min:
   pv: /dev/sdd
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/volumes.yml</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/volumes.yml<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_install_volumes">minio_server_install_volumes</h2>
-<p>Logical volume variable settings
-...</p>
 <pre><code>
 lv_min:
   drive: vg_min
   size: +100%FREE
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/main.yml<br/>
-tasks/volumes.yml</p>
 <h2 id="minio_server_install_dir_mounts">minio_server_install_dir_mounts</h2>
 <p>Directory for logical volume mount
 ...</p>
@@ -440,9 +445,18 @@ tasks/volumes.yml</p>
   src: /dev/vg_min/lv_min
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/volumes.yml<br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/volumes.yml<br/>templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_datadirs">minio_server_datadirs</h2>
 <p>Minio server data directory
 ...</p>
@@ -451,8 +465,22 @@ templates/minio.env.j2</p>
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Vault required</th>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">string</td>
+<td align="left">True</td>
+<td align="left">templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_user">minio_user</h2>
 <p>Minio user
 ...</p>
@@ -461,11 +489,22 @@ minio
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/directories.yml<br/>
-tasks/minio/users.yml<br/>
-templates/minio.init.j2<br/>
-templates/minio.service.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Vault required</th>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">string</td>
+<td align="left">True</td>
+<td align="left">tasks/directories.yml<br/>tasks/minio/users.yml<br/>templates/minio.init.j2<br/>templates/minio.service.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_group">minio_group</h2>
 <p>Minio user group
 ...</p>
@@ -474,11 +513,18 @@ minio
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/directories.yml<br/>
-tasks/minio/minio.yml<br/>
-tasks/minio/users.yml<br/>
-templates/minio.service.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/directories.yml<br/>tasks/minio/minio.yml<br/>tasks/minio/users.yml<br/>templates/minio.service.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_download_base_url">minio_server_download_base_url</h2>
 <p>Base URL to download minio from
 ...</p>
@@ -487,8 +533,18 @@ https://dl.minio.io/server/minio/release/linux-amd64
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-vars/main.yml</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">vars/main.yml<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_bin">minio_server_bin</h2>
 <p>Minio server bin directory
 ...</p>
@@ -497,10 +553,18 @@ vars/main.yml</p>
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/minio/minio.yml<br/>
-templates/minio.init.j2<br/>
-templates/minio.service.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/minio/minio.yml<br/>templates/minio.init.j2<br/>templates/minio.service.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_envfile">minio_server_envfile</h2>
 <p>Path to the file containing the ENV variables for the Minio server
 ...</p>
@@ -509,10 +573,18 @@ templates/minio.service.j2</p>
 ...
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/minio/minio.yml<br/>
-templates/minio.init.j2<br/>
-templates/minio.service.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/minio/minio.yml<br/>templates/minio.init.j2<br/>templates/minio.service.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_port">minio_port</h2>
 <p>Minio server port
 ...</p>
@@ -520,9 +592,18 @@ templates/minio.service.j2</p>
 '9091'
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-tasks/minio/firewall.yml<br/>
-vars/main.yml</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">tasks/minio/firewall.yml<br/>vars/main.yml<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_opts">minio_server_opts</h2>
 <p>Additional Minio server CLI options
 ...</p>
@@ -530,8 +611,18 @@ vars/main.yml</p>
 ''
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_access_key">minio_access_key</h2>
 <p>Minio access key
 ...</p>
@@ -539,8 +630,18 @@ templates/minio.env.j2</p>
 ''
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_secret_key">minio_secret_key</h2>
 <p>Minio secret key
 ...</p>
@@ -548,8 +649,18 @@ templates/minio.env.j2</p>
 ''
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 <h2 id="minio_server_env_extra">minio_server_env_extra</h2>
 <p>Additional environment variables to be set in minio server environment
 ...</p>
@@ -557,8 +668,18 @@ templates/minio.env.j2</p>
 ''
 
 </code></pre>
-<p><strong><font color="green">Where Referenced</font></strong><br/>
-templates/minio.env.j2</p>
+<table>
+<thead>
+<tr>
+<th align="left">Where referenced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">templates/minio.env.j2<br/></td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
