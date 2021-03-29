@@ -4,7 +4,6 @@ minio_server_install_volume_groups:
   vg_min:
     pv: /dev/sdd
 
-# @var: minio_server_install_volumes: Logical volume variable settings
 minio_server_install_volumes:
   lv_min:
     drive: vg_min
@@ -15,10 +14,20 @@ minio_server_install_dir_mounts:
   /var/lib/minio:
     src: /dev/vg_min/lv_min
 
-# @var: minio_server_datadirs: Minio server data directory
+# @var: 
+# minio_server_datadirs:
+#   type: string
+#   description: Minio server data directory
+#   vault_required: true
+# @var_end
 minio_server_datadirs: /var/lib/minio
 
-# @var: minio_user: Minio user
+# @var: 
+# minio_user:
+#   type: string
+#   description: Minio user
+#   vault_required: true
+# @var_end
 minio_user: minio
 
 # @var: minio_group: Minio user group

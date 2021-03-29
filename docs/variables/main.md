@@ -15,9 +15,11 @@ URL to download minio from
 
 '{{ minio_server_download_base_url }}/minio'
   
-```  
-**<font color="green">Where Referenced</font>**  
-tasks/minio/minio.yml
+```
+|Where referenced|
+| :--- |
+|tasks/minio/minio.yml<br/>|
+
 ## minio_server_addr
 
 
@@ -29,7 +31,7 @@ Minio server listen address
 :{{ minio_port }}
 ...
   
-```  
-**<font color="green">Where Referenced</font>**  
-templates/minio.env.j2  
-templates/minio.service.j2
+```
+|Where referenced|
+| :--- |
+|templates/minio.env.j2<br/>templates/minio.service.j2<br/>|

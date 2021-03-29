@@ -35,8 +35,10 @@ appendix:
 # output_files_dir: "files"
 # output_templates_dir: "roletemplates"
 
-output_overwrite: True
-clear_output: True
+# output_overwrite: True
+# clear_output: True
 
 # output_templates: False
 # output_files: False
+
+#transpose_variable_table: True

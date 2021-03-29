@@ -5,7 +5,9 @@
     name: firewalld
     state: started
     enabled: yes
-  tags: minio,firewall
+  tags: 
+    - minio
+    - firewall
 
 - name: Open firewall ssh port
   firewalld:
